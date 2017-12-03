@@ -2,6 +2,9 @@ var mongoose = require('mongoose');
 var fs = require('fs');
 var path = require('path');
 
+// Use native promises
+mongoose.Promise = global.Promise;
+
 mongoose.connect('mongodb://localhost/dog_dashboard');
 
 var models_path = path.join(__dirname, './../models');
